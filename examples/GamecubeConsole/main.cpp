@@ -7,7 +7,7 @@
 GamecubeConsole *gc;
 
 int main(void) {
-    set_sys_clock_khz(130'000, true);
+    //set_sys_clock_khz(130'000, true);
 
     uint joybus_pin = 1;
 

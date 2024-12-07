@@ -10,7 +10,7 @@ void print_bytes(const char *prefix, uint8_t *bytes, uint len);
 N64Controller *controller;
 
 int main(void) {
-    set_sys_clock_khz(130'000, true);
+    //set_sys_clock_khz(130'000, true);
 
     stdio_init_all();
 

@@ -1,14 +1,16 @@
 cmake_minimum_required(VERSION 3.13)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
-set(PICO_SDK_FETCH_FROM_GIT 1)
-include(pico_sdk_import.cmake)
+# Examples don't need their own SDK initialization since it's done in the parent
+# set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+# set(PICO_SDK_FETCH_FROM_GIT 1)
+# include(pico_sdk_import.cmake)
 
-project(joybus_pio CXX C ASM)
+# project(joybus_pio CXX C ASM)
 
-pico_sdk_init()
+# pico_sdk_init()
 
-include_directories(../include)
+# Include directories are inherited from the parent target
+# include_directories(../include)
 
 add_subdirectory(GamecubeConsole)
 add_subdirectory(GamecubeController)
