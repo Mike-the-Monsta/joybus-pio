@@ -33,8 +33,11 @@ target_link_libraries(joybus_pio PUBLIC
     hardware_pio
 )
 
-# Create examples directory
-add_subdirectory(examples)
+# Make examples optional and disabled by default
+option(JOYBUS_BUILD_EXAMPLES "Build joybus-pio examples" OFF)
+if(JOYBUS_BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
 
 # Enable USB output, disable UART output
 pico_enable_stdio_usb(joybus_pio 1)
